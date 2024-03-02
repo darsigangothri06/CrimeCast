@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "crime_application.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/(.*)", "dest": "/crime_application.py" }
+    ],
+    "env": {
+      "STREAMLIT_SERVER_PORT": 8501
+    }
+  }
+  
